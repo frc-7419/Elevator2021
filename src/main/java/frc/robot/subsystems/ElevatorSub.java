@@ -6,6 +6,7 @@ package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.TalonFX;
+import frc.robot.Constants.CanIds;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
@@ -19,16 +20,16 @@ public class ElevatorSub extends SubsystemBase {
     leftMotor = new TalonFX(CanIDs.leftFalcon.id);
     rightMotor = new TalonFX(CanIDs.rightFalcon.id);
 
-    right.setInverted(true);
+    rightMotor.setInverted(true);
   
   }
 
   public void setLeftPower(double power){
-    left.set(ControlMode.PercentOutput, power);
+    leftMotor.set(ControlMode.PercentOutput, power);
   }
   
   public void setRightPower(double power){ 
-    right.set(ControlMode.PercentOutput, power);
+    rightMotor.set(ControlMode.PercentOutput, power);
   }
   @Override
   public void periodic() {
