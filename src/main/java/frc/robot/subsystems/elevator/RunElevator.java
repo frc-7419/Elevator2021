@@ -14,6 +14,11 @@ public class RunElevator extends CommandBase {
         this.joystick = joystick;
     }
 
+    public RunElevator(ElevatorSub elevator, Double power){
+        this.elevator = elevator;
+        this.power = power;
+    }
+
     @Override
     public void initialize() {
 

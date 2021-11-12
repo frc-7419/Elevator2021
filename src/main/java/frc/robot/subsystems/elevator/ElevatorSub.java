@@ -22,6 +22,7 @@ public class ElevatorSub extends SubsystemBase{
         // Need to get CanIDs for the below two statements, they are currently not correct–same with the encoder
         this.leftMotor = new TalonFX(CanIds.leftElevator.id);
         this.rightMotor = new TalonFX(CanIds.rightElevator.id);
+        this.rightMotor.setInverted(true);
         this.encoder = new Encoder(null, null);
         this.limitSwitch = limitSwitch;
     }
